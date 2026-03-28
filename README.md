@@ -2,7 +2,7 @@
 ## Problem Statement
 A mid-sized financial company named SecureTrust Bank offers personal and home loans to customers across urban and rural regions of India. Every day, hundreds of customers apply for loans through online and branch applications.
 
-Until now, SecureTrust Bank has been using a manual verification processwhere loan officers evaluate applications by checking income proofs, employment details, credit history, and other documents. This process is time-consuming, biased & inconsistent.
+Until now, SecureTrust Bank has been using a manual verification process where loan officers evaluate applications by checking income proofs, employment details, credit history, and other documents. This process is time-consuming, biased & inconsistent.
 
 As a result, the bank faces two major challenges:
 
@@ -10,10 +10,10 @@ As a result, the bank faces two major challenges:
 
 2.High-risk customers sometimes get approved, leading to financial losses
 
-To solve this problem, the bank wants to introduce an systemintelligent loan approval powered by Machine Learning that can automatically analyse applicant details and  
-predict whether a loan should be Approved or Rejected human verification.
+To solve this problem, the bank wants to introduce an system intelligent loan approval powered by Machine Learning that can automatically analyse applicant details and  
+predict whether a loan should be Approved or Rejected without human verification.
 
-You are hired as a Machine Learning Engineer before final to design and develop this intelligent system using historical loan application data. The system must learn hidden patterns from previous customer records and provide accurate, fast, and unbiased loan approval decisions.
+You are hired as a Machine Learning Engineer to design and develop this intelligent system using historical loan application data. The system must learn hidden patterns from previous customer records and provide accurate, fast, and unbiased loan approval decisions.
 
 ## 📊 Dataset Description
 
@@ -183,11 +183,9 @@ Techniques used:
                                            Marital Status
                                            Loan Purpose
  
-     Used drop="first" to avoid the dummy variable trap
-
-Outcome:
      
-     All categorical features transformed into model-friendly numerical format
+
+
 
 ## Correlation Heatmap
 
@@ -247,17 +245,14 @@ Models Used:
 
      Logistic Regression
      Decision Tree
-     Random Forest (if included in your notebook)
+     Naive Bayes
 
 Evaluation Metrics:
 
-               Accuracy Score
+               Accuracy Score 
+               Recall score
+               Classification Metric
                
-Insights:
-    
-    Compared model performances to identify the best-performing algorithm
-    free-based models generally handle non-linearity better
-    Logistic Regression provides interpretability
 
 ## Feature Engineering
 
@@ -268,8 +263,6 @@ Steps performed:
       Removed irrelevant column:
 
                 Applicant_ID (no predictive value)
-                Handled missing values
-                Encoded categorical features
                 Created a clean, structured dataset for modeling
 
 Impact:
@@ -284,16 +277,20 @@ Models Trained
 The following machine learning models were trained and evaluated on the dataset:
 
      Logistic Regression
-     Decision Tree Classifier
-     Random Forest Classifier
+     Naive Bayes
+     KNN
+     
 
 Performance Comparison
 
 | Model               | Accuracy | Precision | Recall | F1 Score |
 | ------------------- | -------- | --------- | ------ | -------- |
-| Logistic Regression | 0.78     | 0.76      | 0.74   | 0.75     |
-| Decision Tree       | 0.82     | 0.80      | 0.79   | 0.79     |
-| Random Forest       | 0.86     | 0.85      | 0.84   | 0.84     |
+| Logistic Regression | 0.88     | 0.78      | 0.83   | 0.81     |
+| KNN                 | 0.78     | 0.67      | 0.57   | 0.61     |
+| Naive Bayes         | 0.86     | 0.81      | 0.71   | 0.75     |
+
+
+## Comparatively among above models, the Logistic Regression models performs better as having higher precision ,accuracy and recall score which makes it better for solving the Type 1 error and Type 2 errors.
 
 ## AUTHOR 
 **NAME-** KHUSH GUPTA
